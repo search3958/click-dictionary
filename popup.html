@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Dictionary</title>
+    <style>
+      :root {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 360px;
+        min-height: 420px;
+        background: #f6f6f6;
+      }
+
+      .wrap {
+        padding: 12px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      #wordList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 360px;
+        overflow: auto;
+      }
+
+      .item {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+      }
+
+      .word {
+        font-weight: 700;
+      }
+
+      .meta {
+        margin-top: 4px;
+        font-size: 12px;
+        color: #6b7280;
+        word-break: break-all;
+      }
+
+      .memo-list {
+        margin-top: 6px;
+      }
+
+      .memo-item {
+        font-size: 12px;
+        color: #374151;
+        margin-top: 2px;
+        word-break: break-word;
+      }
+
+      .memo-input {
+        width: 100%;
+        margin-top: 6px;
+        padding: 2px 0;
+        font-size: 12px;
+        color: #4b5563;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+
+      .memo-input::placeholder {
+        color: #9ca3af;
+      }
+
+      #empty {
+        margin: 0;
+        color: #6b7280;
+      }
+
+      #contextMenu {
+        position: fixed;
+        z-index: 9999;
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        padding: 4px;
+        min-width: 110px;
+      }
+
+      #contextMenu button {
+        width: 100%;
+        border: none;
+        background: transparent;
+        text-align: left;
+        padding: 8px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #contextMenu button:hover {
+        background: #f3f4f6;
+      }
+
+      #contextMenu[hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>辞書</h1>
+      <ul id="wordList"></ul>
+      <p id="empty" hidden>まだ単語ないで。</p>
+    </div>
+
+    <div id="contextMenu" hidden>
+      <button id="deleteBtn" type="button">削除</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

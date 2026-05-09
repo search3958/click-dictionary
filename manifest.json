@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Click Dictionary",
+  "version": "0.1.0",
+  "description": "右クリックから選択単語を辞書に追加する拡張",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Click Dictionary",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/logo.png",
+    "32": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  }
+}

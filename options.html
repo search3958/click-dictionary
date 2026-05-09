@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Dictionary - 辞書管理</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Click Dictionary</h1>
+      <p>右クリックで追加した単語一覧</p>
+      <div class="toolbar">
+        <button id="exportBtn">JSONエクスポート</button>
+        <button id="clearBtn" class="danger">全部削除</button>
+      </div>
+      <ul id="wordList"></ul>
+      <p id="empty" hidden>まだ単語ないで。ページ上で単語選んで右クリックしてみて。</p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
